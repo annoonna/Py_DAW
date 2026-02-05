@@ -38,7 +38,7 @@ gdb -batch -ex "run" -ex "bt" --args python3 main.py
 
 🎵 Philosophie-Hinweis: Die Noten-DAW (Py-DAW)
 Fokus: Komposition statt Sound-Design
-Im Gegensatz zu klassischen "Synthesizer-DAWs", die primär auf Klangmanipulation und Effektketten ausgelegt sind, versteht sich dieses System als reine Noten-DAW – ganz im Geiste von Rosegarden. 
+Im Gegensatz zu klassischen "Synthesizer-DAWs", die primär auf Klangmanipulation und Effektketten ausgelegt sind, versteht sich dieses System als reine Noten-DAW – ganz im Geiste von Rosegarden. https://www.rosegardenmusic.com/
 
 Der Kern: Die DAW dient als Partitur- und Sequenzer-Umgebung, in der die musikalische Struktur (Noten, Rhythmik, Harmonien) im Vordergrund steht.    Workflow: Anstatt Sounds "zu schrauben", komponierst du in einer Umgebung, die auf die Logik klassischer Notenschrift und MIDI-Sequenzierung optimiert ist.
 Entwicklungsstatus: Die Py-DAW (Python-basiert) befindet sich aktuell noch im Aufbau. Ziel ist es, die Flexibilität von Python zu nutzen, um eine hochgradig anpassbare Umgebung für Komponisten zu schaffen, die Musik eher "schreiben" als "produzieren". 
