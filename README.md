@@ -49,7 +49,7 @@ Load Sample drücken oder
 
 WAV/MP3 etc. auf den Sampler droppen
 
-Piano-Roll „Record“ unten auf AUS lassen → jetzt hörst du dich, aber es wird nichts geschrieben
+Piano-Roll „Record“ unten auf EIN lassen → !!!! (In Arbeit) jetzt hörst du dich, aber es wird nichts geschrieben !!!!!!
       
 
 🎵 Philosophie-Hinweis: Die Noten-DAW (Py-DAW)
