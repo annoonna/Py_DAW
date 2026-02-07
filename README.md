@@ -36,6 +36,22 @@ gdb -batch -ex "run" -ex "bt" --args python3 main.py
       2   Clip-Ansicht ausblenden: Schalte nur das untere Fenster (Clip-/Device-View) aus, um die vertikale Arbeitsfläche im Arrangement zu vergrößern.
       3   Drag & Drop: Ziehe deine Samples nun direkt aus dem Browser auf eine Audiospur im freien Arrangement-Bereich.
 
+So spielst du am MIDI-Keyboard 
+
+MIDI verbinden: Audio → MIDI Settings → dein Keyboard Connect
+
+Track scharf schalten: Links am Track ist „R“ (Record-Arm) → anklicken
+(Bei uns ist das kein roter Kreis-Icon, sondern das R im Track-Header.)
+
+Instrument laden (wichtig!): Unten auf Device klicken → im Sampler ein Sample laden:
+
+Load Sample drücken oder
+
+WAV/MP3 etc. auf den Sampler droppen
+
+Piano-Roll „Record“ unten auf AUS lassen → jetzt hörst du dich, aber es wird nichts geschrieben
+      
+
 🎵 Philosophie-Hinweis: Die Noten-DAW (Py-DAW)
 Fokus: Komposition statt Sound-Design
 Im Gegensatz zu klassischen "Synthesizer-DAWs", die primär auf Klangmanipulation und Effektketten ausgelegt sind, versteht sich dieses System als reine Noten-DAW – ganz im Geiste von Rosegarden. https://www.rosegardenmusic.com/
