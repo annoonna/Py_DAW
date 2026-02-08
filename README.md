@@ -74,6 +74,30 @@ vulkaninfo | grep -i "device name"
 # ODER für einen visuellen Test (das bekannte "Vulkan-Gears"):
 vkcube
 
+
+Für Windows:
+
+Das Problem ist, dass für das Paket
+python-rtmidi kein fertiges Windows-Binary (Wheel) für Python 3.13 verfügbar ist. pip versucht daher, das Paket aus dem Quellcode zu bauen, wofür ein C++ Compiler (wie Visual Studio) fehlt.
+Hier sind zwei Wege, das zu fixen:
+Weg 1: Der einfache Weg (Pre-compiled Wheel)
+Da Python 3.13 noch sehr neu ist, fehlen oft Binaries. Du kannst versuchen, ein inoffizielles, aber stabiles Wheel von Christoph Gohlkes Projekt auf GitHub (ein bekannter Maintainer für Windows-Python-Binaries) zu laden.
+
+   Lade die passende .whl Datei für cp313 und win_amd64 herunter.
+   Installiere sie manuell: pip install Name_der_Datei.whl
+
+Weg 2: Den Compiler installieren (Saubere Lösung)
+Damit dein System Python-Pakete selbst kompilieren kann, benötigst du die Microsoft C++ Build Tools:
+
+   Lade den Visual Studio Installer herunter.
+   Wähle bei der Installation den Workload "Desktopentwicklung mit C++" aus.
+   Stelle sicher, dass rechts die "MSVC v143..." und das "Windows 11 (oder 10) SDK" angehakt sind.
+   Nach der Installation und einem Neustart wird pip install -r requirements.txt funktionieren.
+
+Zusatz-Tipp zu deinem ersten Fehler:
+In Windows heißt der Befehl meistens nur python statt python3. Dass python3 nicht gefunden wurde, liegt an den App-Ausführungsaliasen in den Windows-Einstellungen, die oft auf den Microsoft Store umleiten. Nutze einfach weiterhin python main.py.
+
+
 🎵 Philosophie-Hinweis: Die Noten-DAW (Py-DAW)
 Fokus: Komposition statt Sound-Design
 Im Gegensatz zu klassischen "Synthesizer-DAWs", die primär auf Klangmanipulation und Effektketten ausgelegt sind, versteht sich dieses System als reine Noten-DAW – ganz im Geiste von Rosegarden. https://www.rosegardenmusic.com/
