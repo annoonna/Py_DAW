@@ -50,7 +50,15 @@ Load Sample drücken oder
 WAV/MP3 etc. auf den Sampler droppen
 
 Piano-Roll „Record“ unten auf EIN lassen → !!!! (In Arbeit) jetzt hörst du dich, aber es wird nichts geschrieben !!!!!!
-      
+
+
+
+ Betreff: Anzeige-Fix für den Arranger (GPU-Waveforms)
+„Hey, falls der Arranger bei dir nicht richtig dargestellt wird (z. B. Grafikfehler, leere Flächen oder Flackern), liegt das wahrscheinlich an den GPU-Voreinstellungen in Kombination mit deinem aktuellen Grafiktreiber.
+Abhilfe:
+Gehe einfach im Menü auf Ansicht und nimm den Haken bei ‚GPU Waveforms‘ raus.
+Hintergrund für dich:
+Das schaltet das Hardware-Rendering (Vulkan/OpenGL) für die Wellenformen aus und nutzt das stabile Software-Rendering. Das ist ein guter Fallback, falls die GPU-Shader-Zuweisung in PyQt6 auf deinem System noch nicht perfekt mit dem Buffer-Sharing harmoniert. Wenn wir das stabil haben wollen, müssten wir uns nochmal die QOpenGLWidget-Initialisierung ansehen.“     
 
 🎵 Philosophie-Hinweis: Die Noten-DAW (Py-DAW)
 Fokus: Komposition statt Sound-Design
