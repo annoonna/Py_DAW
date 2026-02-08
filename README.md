@@ -65,3 +65,16 @@ Verwende Code mit Vorsicht.
 
 Projekt-Status: 🛠 Under Construction
 Die Py-DAW nutzt die Flexibilität von Python, um eine anpassbare Umgebung für Komponisten zu schaffen, die Musik eher "schreiben" als "produzieren".
+
+
+
+
+WINDOWS_INSTALLATION.md
+### Schritt 4: FluidSynth installieren (für MIDI-Playback)
+
+FluidSynth wird benötigt, um MIDI-Noten mit SoundFonts (SF2) in Audio umzuwandeln.
+
+#### 4.1 FluidSynth herunterladen
+
+Gehe zu: https://github.com/FluidSynth/fluidsynth/releases/latest
+
