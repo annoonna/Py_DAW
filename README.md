@@ -1,27 +1,9 @@
 🎵 PyQt-DAW
-
 Python-basierte MIDI/NOTEN-DAW
 Fokus: Komposition statt Sound-Design. Eine hochperformante Umgebung für Partitur, Scale-Snap und MIDI-Sequenzierung – inspiriert von der Logik klassischer Notenschrift wie Rosegarden.
-
 🚀 Philosophie & Vision
-Im Gegensatz zu klassischen "Synthesizer-DAWs", die auf Klangmanipulation fokussiert sind, versteht sich die Py-DAW als reine Noten-DAW.
-Der Kern: Die musikalische Struktur (Noten, Rhythmik, Harmonien) steht im Vordergrund.
-Workflow: Komponieren in einer Umgebung, die auf die Logik von Partituren optimiert ist.
-Entwicklungsstatus: Aktuell im Aufbau. Der Fokus liegt auf der stabilen Einbindung von Browser, Arranger und High-Performance Pre-Rendering.
-🛠 Installation & Setup
-Linux (Debian/Ubuntu/...)
-Für das High-Performance Rendering und Audio-Backend sind System-Libraries erforderlich:
-bash
-# 
-sudo apt update
-sudo apt install -y vulkan-tools libvulkan-dev vulkan-utility-libraries-dev spirv-tools mesa-vulkan-drivers
-
-# 2. 
-# 
-sudo apt install -y nvidia-vulkan-common
-# 
-sudo apt install -y mesa-vulkan-drivers
-Verwende Code mit Vorsicht.
+Im Gegensatz zu klassischen "Synthesizer-DAWs", die auf Klangmanipulation fokussiert sind, versteht sich die Py-DAW als reine Noten-DAW.Der Kern: Die musikalische Struktur (Noten, Rhythmik, Harmonien) steht im Vordergrund.
+Workflow: Komponieren in einer Umgebung, die auf die Logik von Partituren optimiert ist.Entwicklungsstatus: Aktuell im Aufbau. Der Fokus liegt auf der stabilen Einbindung von Browser, Arranger und High-Performance Pre-Rendering.🛠 Installation & SetupLinux (Debian/Ubuntu/...)Für das High-Performance Rendering und Audio-Backend sind System-Libraries erforderlich:bash# sudo apt update sudo apt install -y vulkan-tools libvulkan-dev vulkan-utility-libraries-dev spirv-tools mesa-vulkan-drivers # 2.# sudo apt install -y nvidia-vulkan-common # sudo apt install -y mesa-vulkan-drivers Verwende Code mit Vorsicht.
 
 Windows (Python 3.13 Fix)
 Falls pip install -r requirements.txt bei python-rtmidi fehlschlägt (fehlender Compiler):
