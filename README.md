@@ -9,7 +9,7 @@ Der Kern: Die musikalische Struktur (Noten, Rhythmik, Harmonien) steht im Vorder
 Workflow: Komponieren in einer Umgebung, die auf die Logik von Partituren optimiert ist.
 Entwicklungsstatus: Aktuell im Aufbau. Der Fokus liegt auf der stabilen Einbindung von Browser, Arranger und High-Performance Pre-Rendering.
 🛠 Installation & Setup
-Linux (Debian/Ubuntu/Kali)
+Linux (Debian/Ubuntu/...)
 Für das High-Performance Rendering und Audio-Backend sind System-Libraries erforderlich:
 bash
 # 1. Vulkan-Treiber & Tools installieren
