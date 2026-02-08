@@ -1,109 +1,67 @@
-# Py_DAW
-Python-basierte MIDI/NOTEN-DAW mit Fokus auf Notation, Scale-Snap und High-Performance Pre-Rendering. 
+🎵 PyQt-DAW
 
+Python-basierte MIDI/NOTEN-DAW
+Fokus: Komposition statt Sound-Design. Eine hochperformante Umgebung für Partitur, Scale-Snap und MIDI-Sequenzierung – inspiriert von der Logik klassischer Notenschrift wie Rosegarden.
 
+🚀 Philosophie & Vision
+Im Gegensatz zu klassischen "Synthesizer-DAWs", die auf Klangmanipulation fokussiert sind, versteht sich die Py-DAW als reine Noten-DAW.
+Der Kern: Die musikalische Struktur (Noten, Rhythmik, Harmonien) steht im Vordergrund.
+Workflow: Komponieren in einer Umgebung, die auf die Logik von Partituren optimiert ist.
+Entwicklungsstatus: Aktuell im Aufbau. Der Fokus liegt auf der stabilen Einbindung von Browser, Arranger und High-Performance Pre-Rendering.
+🛠 Installation & Setup
+Linux (Debian/Ubuntu/Kali)
+Für das High-Performance Rendering und Audio-Backend sind System-Libraries erforderlich:
+bash
+# 1. Vulkan-Treiber & Tools installieren
+sudo apt update
+sudo apt install -y vulkan-tools libvulkan-dev vulkan-utility-libraries-dev spirv-tools mesa-vulkan-drivers
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-gdb -batch -ex "run" -ex "bt" --args python3 main.py  
-
-
-   Um Samples ungehindert vom Browser in das Arrangement zu ziehen, ohne dass die Clip-Ansicht (Clip-Arranger) den Platz einnimmt:
-      1   Overlay aktiv lassen: Behalte deine gewohnte Overlay-Einstellung bei, um die Übersicht zu wahren.
-      2   Clip-Ansicht ausblenden: Schalte nur das untere Fenster (Clip-/Device-View) aus, um die vertikale Arbeitsfläche im Arrangement zu vergrößern.
-      3   Drag & Drop: Ziehe deine Samples nun direkt aus dem Browser auf eine Audiospur im freien Arrangement-Bereich.
-
-So spielst du am MIDI-Keyboard 
-
-MIDI verbinden: Audio → MIDI Settings → dein Keyboard Connect
-
-Track scharf schalten: Links am Track ist „R“ (Record-Arm) → anklicken
-(Bei uns ist das kein roter Kreis-Icon, sondern das R im Track-Header.)
-
-Instrument laden (wichtig!): Unten auf Device klicken → im Sampler ein Sample laden:
-
-Load Sample drücken oder
-
-WAV/MP3 etc. auf den Sampler droppen
-
-Piano-Roll „Record“ unten auf EIN lassen → !!!! (In Arbeit) jetzt hörst du dich, aber es wird nichts geschrieben !!!!!!
-
-
-.....................................................
- Betreff: Anzeige-Fix für den Arranger (GPU-Waveforms)
-„Hey, falls der Arranger bei dir nicht richtig dargestellt wird (z. B. Grafikfehler, leere Flächen oder Flackern), liegt das wahrscheinlich an den GPU-Voreinstellungen in Kombination mit deinem aktuellen Grafiktreiber.
-Abhilfe:
-Gehe einfach im Menü auf Ansicht und nimm den Haken bei ‚GPU Waveforms‘ raus.
-Hintergrund für dich:
-Das schaltet das Hardware-Rendering (Vulkan/OpenGL) für die Wellenformen aus und nutzt das stabile Software-Rendering. Das ist ein guter Fallback, falls die GPU-Shader-Zuweisung in PyQt6 auf deinem System noch nicht perfekt mit dem Buffer-Sharing harmoniert. Wenn wir das stabil haben wollen, müssten wir uns nochmal die QOpenGLWidget-Initialisierung ansehen.“     
-.....................................................
-apt update
-apt install -y vulkan-tools libvulkan-dev vulkan-utility-libraries-dev spirv-tools mesa-vulkan-drivers
-.....................................................
-
-# Spezifische Treiber je nach Grafikkarte:
+# 2. Grafikspezifische Treiber (optional)
 # Für NVIDIA:
 sudo apt install -y nvidia-vulkan-common
 # Für AMD/Intel:
 sudo apt install -y mesa-vulkan-drivers
+Verwende Code mit Vorsicht.
 
+Windows (Python 3.13 Fix)
+Falls pip install -r requirements.txt bei python-rtmidi fehlschlägt (fehlender Compiler):
+Visual Studio Build Tools herunterladen.
+Workload "Desktopentwicklung mit C++" wählen.
+Sicherstellen, dass MSVC v143 und das Windows SDK angehakt sind.
+Nach Neustart erneut pip install ausführen.
+🎹 Quick Start: So spielst du am MIDI-Keyboard
+MIDI verbinden: Gehe zu Audio → MIDI Settings → Wähle dein Keyboard und klicke Connect.
+Track scharf schalten: Klicke das [R] (Record-Arm) im jeweiligen Track-Header (links am Track).
+Instrument laden:
+Klicke unten auf Device.
+Drücke Load Sample im Sampler oder droppe eine WAV/MP3-Datei direkt auf das Device-Window.
+Monitoring: Stelle sicher, dass die Piano-Roll auf Record: EIN steht.
+Hinweis (In Arbeit): Aktuell hörst du das Instrument live (Monitoring), Noten werden jedoch noch nicht permanent in den Clip geschrieben.
+🖥️ Workflow-Tipps für das Arrangement
+Freies Drag & Drop aus dem Browser
+Um Samples ohne Platzmangel direkt in das Arrangement zu ziehen:
+Overlay: Behalte dein gewohntes Overlay aktiv.
+Ansicht optimieren: Blende die untere Clip-/Device-View aus, um maximale vertikale Arbeitsfläche im Arranger zu erhalten.
+Import: Ziehe Samples aus dem Browser direkt auf eine Audiospur im freien Bereich.
+Troubleshooting: Grafikfehler (Anzeige-Fix)
+Falls der Arranger Grafikfehler, Flackern oder leere Flächen zeigt:
+Gehe im Menü auf Ansicht.
+Deaktiviere [ ] GPU Waveforms.
+Hintergrund: Dies erzwingt stabiles Software-Rendering, falls die GPU-Shader-Zuweisung (Vulkan/OpenGL) noch nicht optimal mit deinem Treiber harmoniert.
+🐞 Debugging & Entwicklung
+Für Entwickler, die Fehlerberichte erstellen möchten:
+bash
+# Start der DAW mit Backtrace-Ausgabe bei Absturz
+gdb -batch -ex "run" -ex "bt" --args python3 main.py
+Verwende Code mit Vorsicht.
+
+System-Check
+Prüfe deine Vulkan-Hardware mit:
+bash
 vulkaninfo | grep -i "device name"
-# ODER für einen visuellen Test (das bekannte "Vulkan-Gears"):
+# oder visuell:
 vkcube
+Verwende Code mit Vorsicht.
 
-
-Für Windows:
-
-Das Problem ist, dass für das Paket
-python-rtmidi kein fertiges Windows-Binary (Wheel) für Python 3.13 verfügbar ist. pip versucht daher, das Paket aus dem Quellcode zu bauen, wofür ein C++ Compiler (wie Visual Studio) fehlt.
-Hier sind zwei Wege, das zu fixen:
-Weg 1: Der einfache Weg (Pre-compiled Wheel)
-Da Python 3.13 noch sehr neu ist, fehlen oft Binaries. Du kannst versuchen, ein inoffizielles, aber stabiles Wheel von Christoph Gohlkes Projekt auf GitHub (ein bekannter Maintainer für Windows-Python-Binaries) zu laden.
-
-   Lade die passende .whl Datei für cp313 und win_amd64 herunter.
-   Installiere sie manuell: pip install Name_der_Datei.whl
-
-Weg 2: Den Compiler installieren (Saubere Lösung)
-Damit dein System Python-Pakete selbst kompilieren kann, benötigst du die Microsoft C++ Build Tools:
-
-   Lade den Visual Studio Installer herunter.
-   Wähle bei der Installation den Workload "Desktopentwicklung mit C++" aus.
-   Stelle sicher, dass rechts die "MSVC v143..." und das "Windows 11 (oder 10) SDK" angehakt sind.
-   Nach der Installation und einem Neustart wird pip install -r requirements.txt funktionieren.
-
-Zusatz-Tipp zu deinem ersten Fehler:
-In Windows heißt der Befehl meistens nur python statt python3. Dass python3 nicht gefunden wurde, liegt an den App-Ausführungsaliasen in den Windows-Einstellungen, die oft auf den Microsoft Store umleiten. Nutze einfach weiterhin python main.py.
-
-
-🎵 Philosophie-Hinweis: Die Noten-DAW (Py-DAW)
-Fokus: Komposition statt Sound-Design
-Im Gegensatz zu klassischen "Synthesizer-DAWs", die primär auf Klangmanipulation und Effektketten ausgelegt sind, versteht sich dieses System als reine Noten-DAW – ganz im Geiste von Rosegarden. https://www.rosegardenmusic.com/
-
-Der Kern: Die DAW dient als Partitur- und Sequenzer-Umgebung, in der die musikalische Struktur (Noten, Rhythmik, Harmonien) im Vordergrund steht.    Workflow: Anstatt Sounds "zu schrauben", komponierst du in einer Umgebung, die auf die Logik klassischer Notenschrift und MIDI-Sequenzierung optimiert ist.
-Entwicklungsstatus: Die Py-DAW (Python-basiert) befindet sich aktuell noch im Aufbau. Ziel ist es, die Flexibilität von Python zu nutzen, um eine hochgradig anpassbare Umgebung für Komponisten zu schaffen, die Musik eher "schreiben" als "produzieren". 
-
-Status-Check: Da die Py-DAW noch im Aufbau ist, liegt der Fokus derzeit auf der stabilen Einbindung des Browsers und des Arrangers, um den Übergang von der Sample-Auswahl zur strukturellen Komposition so nahtlos wie möglich zu gestalten. 
-
+Projekt-Status: 🛠 Under Construction
+Die Py-DAW nutzt die Flexibilität von Python, um eine anpassbare Umgebung für Komponisten zu schaffen, die Musik eher "schreiben" als "produzieren".
