@@ -1,3 +1,5 @@
+Code oder Blame Lesen.!!!!!!!
+
 🎵 PyQt-DAW 
 Python-basierte MIDI/NOTEN-DAW
 Fokus: Komposition statt Sound-Design. Eine hochperformante Umgebung für Partitur, Scale-Snap und MIDI-Sequenzierung – inspiriert von der Logik klassischer Notenschrift wie Rosegarden.
