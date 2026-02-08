@@ -12,14 +12,14 @@ Entwicklungsstatus: Aktuell im Aufbau. Der Fokus liegt auf der stabilen Einbindu
 Linux (Debian/Ubuntu/...)
 Für das High-Performance Rendering und Audio-Backend sind System-Libraries erforderlich:
 bash
-# 1. Vulkan-Treiber & Tools installieren
+# 
 sudo apt update
 sudo apt install -y vulkan-tools libvulkan-dev vulkan-utility-libraries-dev spirv-tools mesa-vulkan-drivers
 
-# 2. Grafikspezifische Treiber (optional)
-# Für NVIDIA:
+# 2. 
+# 
 sudo apt install -y nvidia-vulkan-common
-# Für AMD/Intel:
+# 
 sudo apt install -y mesa-vulkan-drivers
 Verwende Code mit Vorsicht.
 
