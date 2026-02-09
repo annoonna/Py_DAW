@@ -1,4 +1,4 @@
-Code oder Blame Lesen.!!!!!!!
+Code oder Blame Lesen.!!!!!!! README.md
 
 🎵 PyQt-DAW 
 Python-basierte MIDI/NOTEN-DAW
