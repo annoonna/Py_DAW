@@ -78,3 +78,72 @@ FluidSynth wird benötigt, um MIDI-Noten mit SoundFonts (SF2) in Audio umzuwande
 
 Gehe zu: https://github.com/FluidSynth/fluidsynth/releases/latest
 
+
+
+sudo apt install qsynth fluidsynth fluid-soundfont-gm
+
+
+...............................................
+requirements.txt
+
+
+# --- Audio / MIDI ---
+JACK-Client>=0.5.5
+sounddevice>=0.4.6
+soundfile>=0.12.1
+mido>=1.3.2
+python-rtmidi>=1.5.8
+pydub>=0.25.1
+PySide6>=6.6
+pyfluidsynth>=1.3
+mutagen>=1.47
+tomli-w>=1.0.0
+typing_extensions>=4.9
+scipy>=1.11
+librosa>=0.10
+
+
+
+# --- Core ---
+PyQt6>=6.6
+numpy>=1.26
+
+# --- Graphics (optional) ---
+# The Arranger GPU Waveform overlay currently uses PyOpenGL when enabled.
+PyOpenGL>=3.1.7
+PyOpenGL-accelerate>=3.1.7; platform_system=="Linux"
+
+# Linux Vulkan default (Qt Quick / RHI preparation)
+# NOTE: Qt's Vulkan support primarily depends on system packages
+# (libvulkan1, mesa-vulkan-drivers, vulkan-tools). This Python package is
+# optional and mainly useful for future Vulkan tooling.
+vulkan>=1.3.275.1; platform_system=="Linux"
+
+# Optional: WebGPU (wgpu-native) - uses Vulkan on Linux.
+# This is a future-proof option for replacing OpenGL overlays.
+wgpu>=0.19.0; platform_system=="Linux"
+
+# --- Python 3.13 compatibility (audioop removed) ---
+audioop-lts
+...................................................................................
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
