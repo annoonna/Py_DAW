@@ -126,7 +126,13 @@ wgpu>=0.19.0; platform_system=="Linux"
 # --- Python 3.13 compatibility (audioop removed) ---
 audioop-lts
 ...................................................................................
+# Audio Plugins auf macOS (LV2, LADSPA, DSSI, VST)
 
+Diese Anleitung beschreibt die Pfade, Installationsmethoden und die Einrichtung via Homebrew für Linux-native Plugin-Formate auf macOS.
+
+## 1. Standard-Verzeichnisse (Manuelle Installation)
+
+Kopiere Plugin-Ordner oder Dateien in die folgenden Verzeichnisse. Falls ein Ordner nicht existiert, erstelle ihn manuell.
 
 | Format | Endung | Systemweiter Pfad (für alle Nutzer) | Benutzer-Pfad (nur für dich) |
 | :--- | :--- | :--- | :--- |
