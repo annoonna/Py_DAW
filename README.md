@@ -181,6 +181,12 @@ Symlink von Homebrew-Plugins zu System-Ordnern:
 ln -s $(brew --prefix)/lib/lv2/* ~/Library/Audio/Plug-Ins/LV2/
 Soll ich dir noch die **spezifischen Befehle** für einen bestimmten Plugin-Adapter (wie z.B. einen VST-zu-AU-Wrapper) heraussuchen?
 
+.........................................................................................................................................
+
+
+
+
+
 
 
 
