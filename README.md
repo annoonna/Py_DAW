@@ -179,7 +179,7 @@ Cache von ChronoScaleStudio löschen:
 rm ~/.cache/ChronoScaleStudio/lv2_probe_cache.json
 Symlink von Homebrew-Plugins zu System-Ordnern:
 ln -s $(brew --prefix)/lib/lv2/* ~/Library/Audio/Plug-Ins/LV2/
-Du kannst dir noch die **spezifischen Befehle** für einen bestimmten Plugin-Adapter (wie z.B. einen VST-zu-AU-Wrapper) heraussuchen?
+Du kannst dir noch die **spezifischen Befehle** für einen bestimmten Plugin-Adapter (wie z.B. einen VST-zu-AU-Wrapper) heraussuchen!
 
 .........................................................................................................................................
 
