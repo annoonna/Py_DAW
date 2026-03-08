@@ -128,6 +128,52 @@ audioop-lts
 ...................................................................................
 
 
+| Format | Endung | Systemweiter Pfad (für alle Nutzer) | Benutzer-Pfad (nur für dich) |
+| :--- | :--- | :--- | :--- |
+| **LV2** | `.lv2` | `/Library/Audio/Plug-Ins/LV2` | `~/Library/Audio/Plug-Ins/LV2` |
+| **VST3** | `.vst3` | `/Library/Audio/Plug-Ins/VST3` | `~/Library/Audio/Plug-Ins/VST3` |
+| **VST2** | `.vst` | `/Library/Audio/Plug-Ins/VST` | `~/Library/Audio/Plug-Ins/VST` |
+| **LADSPA**| `.so`/`.dylib` | `/Library/Audio/Plug-Ins/LADSPA` | `~/.ladspa` |
+| **DSSI**  | `.so` | `/Library/Audio/Plug-Ins/DSSI` | `~/.dssi` |
+
+---
+
+## 2. Installation via Homebrew (`brew`)
+
+Einige Basis-Bibliotheken und Plugin-Sammlungen lassen sich direkt über das Terminal installieren.
+
+### Basis-SDKs & Support
+```bash
+brew install lv2
+brew install ladspa-sdk
+brew install suil # Für LV2-GUIs wichtig
+Plugin-Beispiele
+brew install mda-lv2
+brew install lsp-plugins-lv2 # Falls im Tap verfügbar
+
+3. Umgebungsvariablen setzen (Wichtig für DAWs)
+Damit Programme wie Ardour, Reaper oder Audacity die Plugins finden, die über Homebrew installiert wurden, sollten die Pfade in der Shell-Konfigurationsdatei (z.B. ~/.zshrc) hinterlegt werden.
+Öffne die Konfiguration: nano ~/.zshrc und füge hinzu:
+# LV2 Pfade
+export LV2_PATH=$LV2_PATH:/usr/local/lib/lv2:/opt/homebrew/lib/lv2:~/Library/Audio/Plug-Ins/LV2
+
+# LADSPA Pfade
+export LADSPA_PATH=$LADSPA_PATH:/usr/local/lib/ladspa:/opt/homebrew/lib/ladspa:/Library/Audio/Plug-Ins/LADSPA
+Aktivieren mit: source ~/.zshrc
+
+4. Problembehandlung (Gatekeeper)
+macOS blockiert oft Plugins, die nicht von verifizierten Entwicklern stammen.
+Plugin kopieren/installieren.
+DAW starten (Plugin-Scan schlägt ggf. fehl).
+Systemeinstellungen > Datenschutz & Sicherheit öffnen.
+Ganz unten bei "Sicherheit" auf "Dennoch öffnen" für die entsprechende Plugin-Datei klicken.
+DAW erneut scannen lassen.
+5. Nützliche Befehle (Terminal)
+Cache von ChronoScaleStudio löschen:
+rm ~/.cache/ChronoScaleStudio/lv2_probe_cache.json
+Symlink von Homebrew-Plugins zu System-Ordnern:
+ln -s $(brew --prefix)/lib/lv2/* ~/Library/Audio/Plug-Ins/LV2/
+Soll ich dir noch die **spezifischen Befehle** für einen bestimmten Plugin-Adapter (wie z.B. einen VST-zu-AU-Wrapper) heraussuchen?
 
 
 
