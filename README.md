@@ -897,10 +897,25 @@ macos
 
 ....................................................................................................................................................
 
+🎹 Plugin-Unterstützung & Kompatibilität
+Diese DAW wurde für maximale Flexibilität unter Linux entwickelt. Da verschiedene Plugin-Formate unterschiedliche Anforderungen an das Host-System stellen, beachte bitte die folgenden Hinweise:
+✅ VST3 & LV2 (Native Unterstützung)
+Status: Voll unterstützt.
+Handling: VST3- und LV2-Plugins werden direkt über die integrierte Engine (Pedalboard-basiert) geladen.
+Vorteil: Hohe Stabilität, automatisches State-Management und volle Unterstützung moderner Audio-Features.
+⚠️ VST2 (.so Dateien)
+Status: Eingeschränkt / In Entwicklung.
+Hintergrund: Da moderne Python-Audio-Bibliotheken (wie Spotify's Pedalboard) aufgrund von Lizenzvorgaben (Steinberg) VST2 standardmäßig nicht unterstützen, erfordert die Nutzung von VST2-Plugins unter Linux zusätzliche Schritte.
+Empfohlene Nutzung:
+Verwenden Sie für native Linux-VST2-Plugins (.so) einen dedizierten Wrapper oder eine Bridge.
+Profi-Tipp: Nutzen Sie Carla als VST-Host. Da Carla unter Linux oft als VST2 vorliegt, ist für eine nahtlose Integration in die Python-Umgebung derzeit eine Custom-ctypes-Bridge (in Arbeit) oder das Hosting innerhalb einer Carla-Instanz vorgesehen.
+Stellen Sie sicher, dass Ihre VST2-Pfade korrekt gesetzt sind (Standard: ~/.vst oder /usr/lib/vst).
+🛠️ Start-Empfehlung für Linux-Entwickler
+Um Grafikfehler unter Wayland zu vermeiden und detaillierte Fehlerprotokolle bei Plugin-Abstürzen (Segmentation Faults) zu erhalten, starten Sie die DAW bitte mit folgendem Debug-Kommando:
+bash
+QT_QPA_PLATFORM=xcb gdb -batch -ex "run" -ex "bt" --args python3 main.py
 
-
-
-
+........................................................................................................................................................................
 
 
 
