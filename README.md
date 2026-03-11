@@ -916,7 +916,7 @@ bash
 QT_QPA_PLATFORM=xcb gdb -batch -ex "run" -ex "bt" --args python3 main.py
 
 
-hilft bei vst2 
+hilft bei vst2:Terminal: 
 QT_QPA_PLATFORM=xcb python3 main.py 
 
 ........................................................................................................................................................................
