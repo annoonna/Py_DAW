@@ -54,7 +54,7 @@ bash
 # Start der DAW mit Backtrace-Ausgabe bei Absturz
 gdb -batch -ex "run" -ex "bt" --args python3 main.py
 
-Vst2
+Vst2 Terminal:
 QT_QPA_PLATFORM=xcb python3 main.py
 
 
