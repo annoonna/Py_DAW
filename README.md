@@ -915,6 +915,10 @@ Um Grafikfehler unter Wayland zu vermeiden und detaillierte Fehlerprotokolle bei
 bash
 QT_QPA_PLATFORM=xcb gdb -batch -ex "run" -ex "bt" --args python3 main.py
 
+
+hilft bei vst2 
+QT_QPA_PLATFORM=xcb python3 main.py 
+
 ........................................................................................................................................................................
 
 
