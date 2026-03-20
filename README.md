@@ -1,5 +1,7 @@
 Code oder Blame Lesen.!!!!!!! README.md
+
 Wir haben auf Rust umgestellt.Lies Rust_Readme_Installation.md 20.03.2026
+
 🎵 PyQt-DAW 
 Python-basierte MIDI/NOTEN-DAW
 Fokus: Komposition statt Sound-Design. Eine hochperformante Umgebung für Partitur, Scale-Snap und MIDI-Sequenzierung – inspiriert von der Logik klassischer Notenschrift wie Rosegarden.
