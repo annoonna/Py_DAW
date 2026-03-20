@@ -1,6 +1,6 @@
 Code oder Blame Lesen.!!!!!!! README.md
 
-Wir haben auf Rust umgestellt.Lies Rust_Readme_Installation.md 20.03.2026
+Wir haben auf Rust umgestellt. Lies Rust_Readme_Installation.md 20.03.2026
 
 Alle Versionen ab...Py_DAW_v0_0_20_68x_TEAM_READY.zip
 
