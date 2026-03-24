@@ -1,8 +1,8 @@
 Code oder Blame Lesen.!!!!!!! README.md
 
-Wir haben auf Rust umgestellt. Lies Rust_Readme_Installation_v2.md Fall X 20.03.2026
+Wir haben auf Rust umgestellt. Lies Rust_Readme_Installation_und v2.md Fall X 20.03.2026
 
-🚀 Schnellstart
+🚀 Schnellstart 24.03.2026
 Um die DAW zu starten, ist keine manuelle Konfiguration der Pfade oder das Händische Aktivieren der virtuellen Umgebung mehr nötig. Nutze einfach das bereitgestellte Start-Skript:
 Terminal öffnen im Projektverzeichnis.
 Befehl ausführen:
