@@ -13,7 +13,7 @@ Verwende Code mit Vorsicht.
 Beispiel-Output im Terminal:
 Das Skript erkennt automatisch dein Verzeichnis und deinen User-Namen:
 text
-┌──(myenv)─(user㉿hostname)-[~/path/to/Py_DAW_v0_0_20_791_TEAM_READY]
+┌──(myenv)─(user㉿hostname)-[~/path/to/Py_DAW_v0_0_20_79x_TEAM_READY]
 └─$ ./start_daw.sh
 Verwende Code mit Vorsicht.
 
