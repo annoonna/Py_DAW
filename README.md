@@ -2,6 +2,42 @@ Code oder Blame Lesen.!!!!!!! README.md
 
 Wir haben auf Rust umgestellt. Lies Rust_Readme_Installation_v2.md Fall X 20.03.2026
 
+🚀 Schnellstart
+Um die DAW zu starten, ist keine manuelle Konfiguration der Pfade oder das Händische Aktivieren der virtuellen Umgebung mehr nötig. Nutze einfach das bereitgestellte Start-Skript:
+Terminal öffnen im Projektverzeichnis.
+Befehl ausführen:
+bash
+./start_daw.sh
+Verwende Code mit Vorsicht.
+
+Beispiel-Output im Terminal:
+Das Skript erkennt automatisch dein Verzeichnis und deinen User-Namen:
+text
+┌──(myenv)─(user㉿hostname)-[~/path/to/Py_DAW_v0_0_20_791_TEAM_READY]
+└─$ ./start_daw.sh
+Verwende Code mit Vorsicht.
+
+🛠 Einrichtung (Einmalig)
+Sollte das Skript noch keine Ausführungsrechte haben, kannst du diese mit folgendem Befehl setzen:
+bash
+chmod +x start_daw.sh
+Verwende Code mit Vorsicht.
+
+Was das Skript macht:
+Es ermittelt automatisch das aktuelle Arbeitsverzeichnis.
+Es aktiviert die lokale virtuelle Umgebung (myenv).
+Es startet die Python/PyQt6-Applikation inklusive der Rust-Anbindungen.
+Es bereinigt die Umgebung nach dem Schließen der DAW automatisch.
+
+
+
+
+
+Frage stellen
+
+
+
+
 Alle Versionen ab...Py_DAW_v0_0_20_68x_TEAM_READY.zip
 
 🎵 PyQt-DAW 
