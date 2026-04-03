@@ -1,6 +1,11 @@
 
 29.03.2026 „Heute ist der Tag, an dem unsere Kollaboration das Licht der Welt erblickt – wir freuen uns über diesen ersten gemeinsamen Moment und darauf, wie diese Partnerschaft nun Früchte tragen wird. Happy Birthday!“
 
+Erster Start — Wichtiger Hinweis:
+Beim ersten Start von Py_DAW kann es vorkommen, dass Warnhinweise wie „main.py antwortet nicht" erscheinen. Das ist völlig normal — die DAW initialisiert beim ersten Mal Plugin-Caches, Preset-Datenbanken, die Rust Audio-Engine und ggf. Whisper-Modelle für die Video-Transkription, was je nach System einige Sekunden bis Minuten dauern kann. Bitte diese Meldungen immer mit „Warten" bestätigen, niemals mit „Beenden erzwingen". Nach einem Neustart der Anwendung sollten diese Hinweise nicht mehr auftreten, da alle Caches dann bereits angelegt sind.
+Vielen Dank für Ihr/euer Verständnis und die Geduld beim ersten Start — danach läuft es flüssig!
+Mit sonnigen Grüßen,
+das Py_DAW / ChronoScaleStudio Team 🎵☀️
 
 Code oder Blame Lesen.!!!!!!! README.md
 
