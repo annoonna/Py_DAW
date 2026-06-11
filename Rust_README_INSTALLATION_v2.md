@@ -47,6 +47,17 @@ Das ist der wichtigste Schritt. Dabei werden – je nach Projektstand – unter 
 
 Danach ist das Projekt in der Regel startbereit.
 
+🛠️ In 3 Schritten zur Python-Umgebung
+Ordner erstellen (nur 1x nötig):Erstelle die Umgebung namens myenv mit diesem Befehl:Terminal Tilix z.B.
+python3 -m venv myenv
+
+Umgebung aktivieren:Das ist genau der Befehl aus deinem Beispiel:
+source myenv/bin/activate
+
+Umgebung wieder verlassen:Wenn du fertig bist und zurück zur normalen System-Umgebung willst, tippst du einfach:
+deactivate
+
+
 ### 2. Virtuelle Umgebung aktivieren
 
 ```bash
