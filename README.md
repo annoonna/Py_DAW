@@ -2,9 +2,9 @@ Einfacher Start ----------->Rust Build  Terminal   ./start_daw.sh
 
 ps aux | grep pydaw_engine | grep -v grep
 
-sudo apt update && sudo apt install python3-venv -y
-python3 -m venv myenv
-source myenv/bin/activate
+sudo apt update && sudo apt install python3-venv -y    ....
+python3 -m venv myenv    ......
+source myenv/bin/activate  .....
 
 
 29.03.2026 „Heute ist der Tag, an dem unsere Kollaboration das Licht der Welt erblickt – wir freuen uns über diesen ersten gemeinsamen Moment und darauf, wie diese Partnerschaft nun Früchte tragen wird. Happy Birthday!“
