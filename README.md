@@ -1,3 +1,8 @@
+
+
+Freie Software.
+
+
 Einfacher Start ----------->Rust Build  Terminal   ./start_daw.sh 
 
 ps aux | grep pydaw_engine | grep -v grep
